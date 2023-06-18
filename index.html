@@ -1,10 +1,176 @@
 <!DOCTYPE HTML>
+<html>
 <head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.resource-container {
+  display: flex;
+  justify-content: center;
+}
+
+.resource-link {
+  display: inline-block;
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  transition: background-color 0.3s;
+}
+
+.resource-link:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.resource-link:first-child {
+  margin-left: 0;
+}
+
+.resource-link:last-child {
+  margin-right: 0;
+}
+
+.introduction {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.introduction h2 {
+  color: #333;
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.introduction p {
+  color: #666;
+}
+
+.how-to {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.how-to h2 {
+  color: #333;
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.how-to ol {
+  text-align: left;
+  margin-left: 40px;
+  color: #666;
+}
+
+.how-to ol li {
+  margin-bottom: 10px;
+}
+.information {
+    margin-top: 50px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+.information h2 {
+  color: #333;
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.information ol {
+  text-align: left;
+  margin-left: 40px;
+  color: #666;
+}
+
+.information ol li {
+  margin-bottom: 10px;
+}
+</style>
 </head>
 <body>
-  <h1>TinyMSG webpage</h1>
-  <h3>This page is the offical Website of TinyMSG.</h3>
-  <p>resources:</p>
-  <a href= "https://tmsg.nextage.top/source.json">TinyMSG Official Source List</a>
-  <a href= "https://tmsg.nextage.top/update.json">Update Checker</a>
+  <div class="container">
+    <h1>TinyMSG webpage</h1>
+    <h3>This page is the official Website of TinyMSG.</h3>
+    <p>Resources:</p>
+    <div class="resource-container">
+      <a class="resource-link" href="https://tmsg.nextage.top/source.json">TinyMSG Official Source List</a>
+      <a class="resource-link" href="https://tmsg.nextage.top/update.json">Update Checker</a>
+    </div>
+    <div class="introduction">
+      <h2>Introduction</h2>
+      <p>This is the official webpage of TinyMSG. It provides resources and updates related to the TinyMSG messaging platform. You can find the official source list and update checker links above. Stay connected and updated with TinyMSG!</p>
+    </div>
+    <div class="how-to">
+      <h2>How to insert your server to the Central Source</h2>
+      <ol>
+        <li>Ensure your server meets the requirements for compatibility, make sure you understand our agreement carefully.</li>
+        <li>Obtain the necessary server information, including the server version, IP address, and port.</li>
+        <li>Send a issue under our Github page.</li>
+        <li>Test the connectivity and functionality of your server.</li>
+        <li>Submit a request to the TinyMSG team for review and inclusion in the Central Source.</li>
+      </ol>
+    </div>
+    <div class="information">
+        <h2>Agreement</h2>
+        <ol>
+            <li>
+          TinyMSG is an open-source, lightweight chat software. It does not have a moderation system, so you are responsible for the content in your channels. I am not liable for any inappropriate content that may appear in your channels.
+            </li>
+        <li>
+          You are responsible for managing your server. If you intend to make your server open to the public, you should provide appropriate guidance and instructions.
+        </li>
+        <li>
+          If you broadcast an NSFW (Not Safe for Work) image on your server, please proactively set its NSFW status to true.
+        </li>
+        <li>
+          If you wish to have your server added to the official server sources, please submit an issue.
+        </li>
+        </ol>
+      </div>
+      
+  </div>
 </body>
+</html>
