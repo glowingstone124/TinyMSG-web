@@ -1,0 +1,14 @@
+{
+    "Source": "Central",
+    "Last-Update": "2023/06/20",
+    "Server-list": {
+        "localhost":{
+            "ip": "localhost",
+            "port":1234
+        },
+        "Official Server":{
+            "ip": "qoriginal.vip",
+            "port":1234
+        }
+    }
+}
