@@ -4,128 +4,172 @@
 <style>
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+  margin: 20px;
 }
 
 .container {
-  display: flex;
-  height: 100vh;
-}
-
-.sidebar {
-  width: 250px;
-  background-color: #333;
-  color: #fff;
-  transition: transform 0.3s ease-in-out;
-  transform: translateX(0);
-}
-
-.sidebar.collapsed {
-  transform: translateX(-250px);
-}
-
-.content {
-  flex-grow: 1;
-  padding: 20px;
-  background-color: #f8f8f8;
-  transition: margin-left 0.3s ease-in-out;
-  margin-left: 250px;
-}
-
-.content.collapsed {
-  margin-left: 0;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 h1 {
-  font-size: 24px;
+  color: #333;
+  font-size: 50px;
+  font-weight: 150;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #666;
   margin-bottom: 10px;
 }
 
-.menu-toggle {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 999;
-  font-size: 24px;
+p {
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.resource-container {
+  display: flex;
+  justify-content: center;
+}
+
+.resource-link {
+  display: inline-block;
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  transition: background-color 0.3s;
+}
+
+.resource-link:hover {
+  background-color: #007bff;
   color: #fff;
-  cursor: pointer;
 }
 
-.menu-toggle.collapsed {
-  transform: rotate(180deg);
+.resource-link:first-child {
+  margin-left: 0;
 }
 
-.menu-toggle:before {
-  content: "\2261";
+.resource-link:last-child {
+  margin-right: 0;
 }
 
-.menu-toggle.collapsed:before {
-  content: "\2715";
+.introduction {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.introduction h2 {
+  color: #333;
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.introduction p {
+  color: #666;
+}
+
+.how-to {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.how-to h2 {
+  color: #333;
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.how-to ol {
+  text-align: left;
+  margin-left: 40px;
+  color: #666;
+}
+
+.how-to ol li {
+  margin-bottom: 10px;
+}
+.information {
+    margin-top: 50px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+.information h2 {
+  color: #333;
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.information ol {
+  text-align: left;
+  margin-left: 40px;
+  color: #666;
+}
+
+.information ol li {
+  margin-bottom: 10px;
 }
 </style>
-<script>
-  const sidebar = document.getElementById('sidebar');
-  const content = document.getElementById('content');
-  const menuToggle = document.getElementById('menu-toggle');
-
-  menuToggle.addEventListener('click', function() {
-    sidebar.classList.toggle('collapsed');
-    content.classList.toggle('collapsed');
-    menuToggle.classList.toggle('collapsed');
-  });
-</script>
 </head>
 <body>
   <div class="container">
-    <div class="sidebar" id="sidebar">
-      <h1>Menu</h1>
-      <a class="menu-link" href="#">Link 1</a>
-      <a class="menu-link" href="#">Link 2</a>
-      <a class="menu-link" href="#">Link 3</a>
+    <h1>TinyMSG</h1>
+    <h3> - Tiny, CLI-supported Chat App</h3>
+    <p>Resources:</p>
+    <div class="resource-container">
+      <a class="resource-link" href="https://tmsg.nextage.top/source.json">TinyMSG Central Source List</a>
+      <a class="resource-link" href="https://tmsg.nextage.top/update.json">Update Checker</a>
     </div>
-    <div class="content" id="content">
-      <h1>TinyMSG</h1>
-      <h3> - Tiny, CLI-supported Chat App</h3>
-      <p>Resources:</p>
-      <div class="resource-container">
-        <a class="resource-link" href="https://tmsg.nextage.top/source.json">TinyMSG Central Source List</a>
-        <a class="resource-link" href="https://tmsg.nextage.top/update.json">Update Checker</a>
-        <a class="resource-link" href="https:/github.com/glowingstone124/TinyMSG">Official Github Pager</a>
-      </div>
-      <div class="introduction">
-        <h2>Introduction</h2>
-        <p>This is the official webpage of TinyMSG. It provides resources and updates related to the TinyMSG messaging platform. You can find the Central source list and update checker links above. Stay connected and updated with TinyMSG!</p>
-      </div>
-      <div class="how-to">
-        <h2>How to insert your server to the Central Source</h2>
-        <ol>
-          <li>Ensure your server meets the requirements for compatibility, make sure you understand our agreement carefully.</li>
-          <li>Obtain the necessary server information, including the server version, IP address, and port.</li>
-          <li>Send a issue under our Github page.</li>
-          <li>Be ready for new users!</li>
-        </ol>
-      </div>
-      <div class="information">
+    <div class="introduction">
+      <h2>Introduction</h2>
+      <p>This is the official webpage of TinyMSG. It provides resources and updates related to the TinyMSG messaging platform. You can find the Central source list and update checker links above. Stay connected and updated with TinyMSG!</p>
+    </div>
+    <div class="how-to">
+      <h2>How to insert your server to the Central Source</h2>
+      <ol>
+        <li>Ensure your server meets the requirements for compatibility, make sure you understand our agreement carefully.</li>
+        <li>Obtain the necessary server information, including the server version, IP address, and port.</li>
+        <li>Send a issue under our Github page.</li>
+        <li>Be ready for new users!</li>
+      </ol>
+    </div>
+    <div class="information">
         <h2>Agreement</h2>
         <ol>
-          <li>
-            TinyMSG is an open-source, lightweight chat software. It does not have a moderation system, so you are responsible for the content in your channels. I am not liable for any inappropriate content that may appear in your channels.
-          </li>
-          <li>
-            You are responsible for managing your server. If you intend to make your server open to the public, you should provide appropriate guidance and instructions.
-          </li>
-          <li>
-            If you broadcast an NSFW (Not Safe for Work) image on your server, please proactively set its NSFW status to true.
-          </li>
-          <li>
-            If you wish to have your server added to the Central server sources, please submit an issue.
-          </li>
+            <li>
+          TinyMSG is an open-source, lightweight chat software. It does not have a moderation system, so you are responsible for the content in your channels. I am not liable for any inappropriate content that may appear in your channels.
+            </li>
+        <li>
+          You are responsible for managing your server. If you intend to make your server open to the public, you should provide appropriate guidance and instructions.
+        </li>
+        <li>
+          If you broadcast an NSFW (Not Safe for Work) image on your server, please proactively set its NSFW status to true.
+        </li>
+        <li>
+          If you wish to have your server added to the Central server sources, please submit an issue.
+        </li>
         </ol>
       </div>
-    </div>
-    <div class="menu-toggle" id="menu-toggle"></div>
+      
   </div>
 </body>
 </html>
