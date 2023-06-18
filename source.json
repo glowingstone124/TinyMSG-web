@@ -3,12 +3,18 @@
     "Last-Update": "2023/06/20",
     "Server-list": {
         "localhost":{
+            "version": 1.3
             "ip": "localhost",
             "port":1234
         },
         "Official Server":{
+            "version": 1.3
             "ip": "qoriginal.vip",
             "port":1234
         }
+        "Test Server": {
+            "version": 1.4,
+            "port":1234,
+            "ip": "this.is.not.a.avliable.ip"
     }
 }
