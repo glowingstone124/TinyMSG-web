@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: white;
+        }
+        .title{
+            margin-top: 100px;
+            margin-left: 100px;
+        }
+        .tt{
+            top: 100px;
+            left: 100px;
+            font-size: 70px;
+            color: black;
+            font-family: title;
+            letter-spacing:2px;
+            font-weight: 100;
+            margin-left:20px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .copy-button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-size: 12px;
+            cursor: pointer;
+            background-color: #ddd;
+            padding: 3px 5px;
+            border: 1px solid #999;
+            border-radius: 3px;
+        }
+        .tt2{
+            color: black;
+            font-family: title;
+            font-weight: 500;
+            margin:30px
+        }
+        @font-face {
+            font-family: title;
+            src: url(tnr.ttf);
+        }
+        @font-face {
+            font-family: opensans;
+            src: url(opensans.ttf);
+        }
+        .content {
+            margin: 30px 100px;
+            margin-top: 70px;
+        }
+        .content p {
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-family: opensans;
+        }
+        .content ol {
+            margin-left: 30px;
+            font-size: 20px;
+            font-family: opensans;
+        }
+        code {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: #f2f2f2;
+            padding: 3px 5px;
+            white-space: pre-wrap;
+        }
+        pre {
+            background-color: #f2f2f2;
+            padding: 5px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            display: flex;
+            font-family: 'JetBrains Mono', monospace;
+            position: relative;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="title">
+        <h1 class="tt">TinyMSG Starter Guide</h1>
+        <h3 class="tt2">author: glowingstone</h3>
+        <h3 class="tt2">2023/7/27</h3>
+        <div class="content">
+            <p>Welcome! In this tutorial, I will show how to start chat using TinyMSG.</p>
+            <p>TinyMSG is a fast, CLI-supported chat app.It can easily connect you with your friends.</p>
+            <p>If you only want to join a server, please follow these steps below:</p>
+            <ol>
+                <li>Download TinyMSG Client from our <a href="https://github.com/glowingstone124/TinyMSG">github page</a></li>
+                <li>Connect to a server in Source or connect your own server by editing client config.</li>
+            </ol>
+            <p>an example of client_cfg.json:</p>
+            <pre>
+            <code>{"serverAddress":"localhost","serverPort":1234,"token":"0", "Source":"https://tmsg.glowingstone.cn/source.json", "fromSource": "YES","AcceptNSFW": false}</code>
+            <span class="copy-button" onclick="copyCodeToClipboard(this)">复制</span>
+        </pre>
+        <p>If you encontered an error in start, please check client_cfg.json is in the same directionary with program it self and it contains all nesseary values.</p>
+        </div>
+    </div>
+    <script>
+        function copyCodeToClipboard(button) {
+            const codeElement = button.previousElementSibling; // Use previousElementSibling to skip the whitespace text node
+        const codeText = codeElement.textContent.trim(); // Trim the content to remove leading/trailing whitespaces
+        const tempInput = document.createElement('textarea');
+        tempInput.value = codeText;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+            alert('success!');
+        }
+    </script>
+</body>
+

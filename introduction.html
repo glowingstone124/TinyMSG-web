@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Rounded Rectangles</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* 纵向排列 */
+        }
+        h1 {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            font-size: 45px;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+        .rounded-rectangle {
+            width: 600px;
+            height: 100px;
+            background-color: #384d61;
+            border-radius: 10px;
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            color: #ffffff;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .rounded-rectangle:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(66, 135, 245, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1>TinyMSG introduction menu</h1>
+
+    <div class="container">
+        <div class="container">
+            <div class="rounded-rectangle" onclick="navigateToPage('https://tmsg.glowingstone.cn/introduction-start.html')">
+                Start using TinyMSG
+            </div>
+            <div class="rounded-rectangle" onclick="navigateToPage('#')">
+                More introduction writing...
+            </div>
+            <!-- Add more rounded rectangles as needed -->
+        </div>
+    </div>
+    <script>
+        function navigateToPage(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
